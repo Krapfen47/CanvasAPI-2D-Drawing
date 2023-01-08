@@ -33,12 +33,14 @@ export default class EntryScene {
 
         this._meshes = []
  
-        this._cube = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial({color: new THREE.Color('red')}))
-        this._cube.name = 'mesh'
- 
-        this._meshes.push(this._cube)
+        // this._mesh = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial({color: new THREE.Color('red')}))
+        this._mesh = new THREE.Mesh(new THREE.SphereGeometry(), new THREE.MeshBasicMaterial({color: new THREE.Color('red')}))
 
-        this._scene.add(this._cube)
+        this._mesh.name = 'mesh'
+ 
+        this._meshes.push(this._mesh)
+
+        this._scene.add(this._mesh)
 
         this._renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true })
         
@@ -76,8 +78,8 @@ export default class EntryScene {
 
     effects () {
         const time = this._clock.getElapsedTime()
-        this._cube.position.set(Math.cos(time), Math.sin(time), Math.tan(time))
-        this._cube.rotation.set(this._cube.rotation.x + 0.01, this._cube.rotation.y + 0.01, this._cube.rotation.z + 0.01)
+        this._mesh.position.set(Math.pow(Math.cos(time), 5), Math.pow(Math.sin(time),3), Math.tan(time))
+        this._mesh.rotation.set(this._mesh.rotation.x + 0.01, this._mesh.rotation.y + 0.01, this._mesh.rotation.z + 0.01)
 
     }
 
