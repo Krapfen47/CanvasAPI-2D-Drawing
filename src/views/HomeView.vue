@@ -1,8 +1,19 @@
-<script setup>
+<script>
+
+export default {
+  name: 'HomeView',
+  data() {
+      return {
+        foo: 'bar'
+    }
+  }
+  
+}
+
 </script>
 
 <template>
-  <main>
-    
-  </main>
+  <div style="height: 100%; width: 100%;">
+    <entry-scene/>
+  </div>
 </template>
