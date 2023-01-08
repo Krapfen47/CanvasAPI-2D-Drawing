@@ -1,10 +1,10 @@
 <script>
 
 export default {
-  name: 'HomeView',
+  name: 'TextureMagicView',
   data() {
       return {
-        foo: 'bar'
+        scene: null
     }
   }
   
@@ -14,6 +14,7 @@ export default {
 
 <template>
   <div style="height: calc(100% - 48px); width: 100%; position: absolute;">
-    <entry-scene/>
+    <texture-magic-scene/>
   </div>
+
 </template>

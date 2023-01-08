@@ -5,7 +5,6 @@ export default class EntryScene {
     constructor(el) {
         if(el) {
             this.init(el)
-            this.animate()
         }
     }
 
@@ -31,13 +30,16 @@ export default class EntryScene {
         this._light.name = 'light'
         this._scene.add( this._light )
 
-        const cube = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial({color: new THREE.Color('red')}))
-        cube.name = 'mesh'
-        this._scene.add(cube)
+        this._meshes = []
+ 
+        this._cube = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial({color: new THREE.Color('red')}))
+        this._cube.name = 'mesh'
+ 
+        this._meshes.push(this._cube)
 
-    
+        this._scene.add(this._cube)
+
         this._renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true })
-        
         
         this._renderer.setPixelRatio(window.devicePixelRatio)
         this._renderer.setSize(el.clientWidth, el.clientHeight)
@@ -49,9 +51,12 @@ export default class EntryScene {
         this._renderer.toneMapping = THREE.ACESFilmicToneMapping
         this._renderer.toneMappingExposure = 0.5
     
-        this._renderer.setClearColor(0xffffff, 0)
+        // this._renderer.setClearColor(0xffffff, 0)
+        this._renderer.setClearColor(0x000000, 0)
 
         this._controls = new OrbitControls(this._camera, this._renderer.domElement)
+
+        this._clock = new THREE.Clock()
     }
 
     animate () {
@@ -62,8 +67,15 @@ export default class EntryScene {
 
     renderScene () {
         this.resizeCanvasToDisplaySize()
+        
+        this.effects()
 
         this._renderer.render(this._scene, this._camera)
+    }
+
+    effects () {
+        const time = this._clock.getElapsedTime()
+        this._cube.position.set(Math.cos(time), Math.sin(time), Math.tan(time))
     }
 
     resizeCanvasToDisplaySize () {

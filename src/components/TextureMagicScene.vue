@@ -1,5 +1,5 @@
 <script lang ="js">
-import EntryScene from '../three/EntryScene.js'
+import TextureMagicScene from '../three/TextureMagicScene.js'
 
   export default {
     name: 'EntryScene',
@@ -9,7 +9,7 @@ import EntryScene from '../three/EntryScene.js'
       }
     },
     mounted() {
-        this.scene = new EntryScene(this.$refs.model)
+        this.scene = new TextureMagicScene(this.$refs.model)
         this.scene.animate()
     }
   }
