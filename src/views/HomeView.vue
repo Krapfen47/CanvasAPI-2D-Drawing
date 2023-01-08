@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div style="height: 100%; width: 100%;">
+  <div style="height: calc(100% - 48px); width: 100%; position: absolute;">
     <entry-scene/>
   </div>
 </template>

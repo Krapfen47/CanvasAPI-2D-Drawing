@@ -21,16 +21,22 @@ export default class EntryScene {
         this._camera = new THREE.PerspectiveCamera(fieldOfView, aspect, near, far)
         this._camera.position.set(10,10,10)
         this._camera.up.set(0,0,1)
+        this._camera.name = 'camera'
 
         this._scene = new THREE.Scene()
 
         this._scene.add(this._camera)
 
+        this._light = new THREE.AmbientLight(0x404040 )
+        this._light.name = 'light'
+        this._scene.add( this._light )
+
         const cube = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial({color: new THREE.Color('red')}))
+        cube.name = 'mesh'
         this._scene.add(cube)
 
     
-        this._renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: true })
+        this._renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true })
         
         
         this._renderer.setPixelRatio(window.devicePixelRatio)
@@ -43,7 +49,7 @@ export default class EntryScene {
         this._renderer.toneMapping = THREE.ACESFilmicToneMapping
         this._renderer.toneMappingExposure = 0.5
     
-        // this._renderer.setClearColor(0xffffff)
+        this._renderer.setClearColor(0xffffff, 0)
 
         this._controls = new OrbitControls(this._camera, this._renderer.domElement)
     }
@@ -61,7 +67,6 @@ export default class EntryScene {
     }
 
     resizeCanvasToDisplaySize () {
-        debugger
         const canvas = this._renderer.domElement
         const width = this._el.clientWidth
         const height = this._el.clientHeight

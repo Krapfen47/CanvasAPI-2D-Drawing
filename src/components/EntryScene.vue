@@ -17,7 +17,7 @@ import EntryScene from '../three/EntryScene.js'
 </script>
 
 <template>
-  <div style="height: 100%; width: 100%;" ref="model">
+  <div style="height: 100%; width: 100%; position: absolute;" ref="model">
 
   </div>
 </template>

@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <div>
+  <div style="height: 48px;">
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/projects">Projects</RouterLink>
   </div>
