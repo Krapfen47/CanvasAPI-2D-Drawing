@@ -5,6 +5,7 @@ export default class EntryScene {
     constructor(el) {
         if(el) {
             this.init(el)
+            this.animate()
         }
     }
 
@@ -76,6 +77,8 @@ export default class EntryScene {
     effects () {
         const time = this._clock.getElapsedTime()
         this._cube.position.set(Math.cos(time), Math.sin(time), Math.tan(time))
+        this._cube.rotation.set(this._cube.rotation.x + 0.01, this._cube.rotation.y + 0.01, this._cube.rotation.z + 0.01)
+
     }
 
     resizeCanvasToDisplaySize () {
