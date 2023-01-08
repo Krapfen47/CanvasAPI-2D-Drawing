@@ -10,7 +10,6 @@ import EntryScene from '../three/EntryScene.js'
     },
     mounted() {
         this.scene = new EntryScene(this.$refs.model)
-        this.scene.animate()
     }
   }
 

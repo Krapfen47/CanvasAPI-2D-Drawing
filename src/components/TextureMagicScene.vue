@@ -10,7 +10,6 @@ import TextureMagicScene from '../three/TextureMagicScene.js'
     },
     mounted() {
         this.scene = new TextureMagicScene(this.$refs.model)
-        this.scene.animate()
     }
   }
 
