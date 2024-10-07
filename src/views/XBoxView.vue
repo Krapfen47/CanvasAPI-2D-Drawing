@@ -1,10 +1,9 @@
 <script>
 
 export default {
-  name: 'TextureMagicView',
+  name: 'XBoxView',
   data() {
       return {
-        scene: null
     }
   }
   
@@ -14,7 +13,6 @@ export default {
 
 <template>
   <div style="height: calc(100% - 48px); width: 100%; position: absolute;">
-    <texture-magic-scene/>
+    <x-box-scene/>
   </div>
-
 </template>

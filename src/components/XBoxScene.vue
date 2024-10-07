@@ -1,15 +1,15 @@
 <script lang ="js">
-import TextureMagicScene from '../three/TextureMagicScene.js'
+import XBoxScene from '../three/XBoxScene.js'
 
   export default {
-    name: 'EntryScene',
+    name: 'XBoxScene',
     data() {
       return {
         scene: null
       }
     },
     mounted() {
-        this.scene = new TextureMagicScene(this.$refs.model)
+        this.scene = new XBoxScene(this.$refs.model)
     }
   }
 
