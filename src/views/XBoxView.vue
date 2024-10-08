@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div style="height: calc(100% - 48px); width: 100%; position: absolute;">
+  <div style="height: 100%; width: 100%; position: absolute;">
     <x-box-scene/>
   </div>
 </template>

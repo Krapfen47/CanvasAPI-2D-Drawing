@@ -9,7 +9,10 @@ import XBoxScene from '../three/XBoxScene.js'
       }
     },
     mounted() {
-        this.scene = new XBoxScene(this.$refs.model)
+      this.scene = new XBoxScene(this.$refs.model)
+    },
+    unmounted() {
+      this.scene.dispose()
     }
   }
 
