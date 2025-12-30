@@ -66,7 +66,7 @@ function DrawElements(elements = currentPolygon) {
   if (elements.length === 0 && finishedPolygons.length === 0) {
     // Draw initial text
     ctx.font = "16px Arial";
-    ctx.fillText("Click anywhere on the canvas", 80, 150);
+    ctx.fillText("Click anywhere on the canvas", canvas.width / 2 - 100, canvas.height / 2);
     return;
   }
 
