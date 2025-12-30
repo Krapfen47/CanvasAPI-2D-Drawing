@@ -44,6 +44,9 @@ canvas.addEventListener("dblclick", (event) => {
 
 // Handle draw
 canvas.addEventListener("click", (event) => {
+    if (event.detail === 2)
+      return;
+
     const { x, y } = getCurrentPoint(event);
 
     if (currentStroke.start === null)

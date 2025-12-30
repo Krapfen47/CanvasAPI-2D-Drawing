@@ -62,8 +62,30 @@ For FinishPolygon mesages:
  - if there is no current polygon (this means right click was used before even adding a single vertex), ignore the message
  - if there is a current polygon, reset the current polygon to None and add the current polygon as a new elemnet to finishedPolygons.
 *)
+
+let updateCurrentPolygon (coord: Coord) (model : Model) = 
+    match model.currentPolygon with 
+    | None -> Some [coord]
+    | Some current -> Some(coord :: current)
+
 let updateModel (msg : Msg) (model : Model) =
-    model
+    match msg with 
+    | AddPoint coord ->
+        { model with 
+            currentPolygon = updateCurrentPolygon coord model
+            past = Some model
+            future = None
+        }
+    | FinishPolygon -> 
+        match model.currentPolygon with
+            | None -> model
+            | Some currentPoly -> 
+                { model with
+                    currentPolygon = None
+                    past = Some model
+                    future = None
+                    finishedPolygons = currentPoly :: model.finishedPolygons
+                }
 
 // wraps an update function with undo/redo.
 let addUndoRedo (updateFunction : Msg -> Model -> Model) (msg : Msg) (model : Model) =
@@ -76,10 +98,14 @@ let addUndoRedo (updateFunction : Msg -> Model -> Model) (msg : Msg) (model : Mo
     | Undo -> 
         // TODO implement undo logics, HINT: restore the model stored in past, and replace the current
         // state with it.
-        model
+        match model.past with
+            | None -> model
+            | Some m -> { m with future = Some model}
     | Redo -> 
         // TODO: same as undo
-        model
+        match model.future with
+            | None -> model
+            | Some m -> m
     | _ -> 
         // use the provided update function for all remaining messages
         { updateFunction msg model with past = Some model }
