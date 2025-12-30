@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+
+    button {
+        width: 100px;
+        font-size: large;
+    }
+
+    canvas {
+      border: 2px solid #333;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+      <button id="undo">Undo</button>
+      <button id="redo">Redo</button>
+  </div>
+  <canvas id="canvas" width="400" height="300"></canvas>
+
+  <!-- Import external JavaScript -->
+  <script src="canvas.js"></script>
+</body>
 </html>
