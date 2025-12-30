@@ -65,6 +65,7 @@ canvas.addEventListener("click", (event) => {
 
 function DrawElements(elements = currentPolygon) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.lineWidth = 2;
 
   if (elements.length === 0 && finishedPolygons.length === 0) {
     // Draw initial text
@@ -75,6 +76,7 @@ function DrawElements(elements = currentPolygon) {
 
   // Start a new Path
   ctx.beginPath();
+  ctx.strokeStyle = "black";
 
   finishedPolygons.forEach(polygon => {
     polygon.forEach(element => {
@@ -82,7 +84,10 @@ function DrawElements(elements = currentPolygon) {
         ctx.lineTo(element.end.x, element.end.y);
     })
   });
+  ctx.stroke();
 
+  ctx.beginPath();
+  ctx.strokeStyle = "green";
   elements.forEach(element => {
     ctx.moveTo(element.start.x, element.start.y);
     ctx.lineTo(element.end.x, element.end.y);

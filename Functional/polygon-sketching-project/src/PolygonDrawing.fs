@@ -84,7 +84,8 @@ let updateModel (msg : Msg) (model : Model) =
                     currentPolygon = None
                     past = Some model
                     future = None
-                    finishedPolygons = currentPoly :: model.finishedPolygons
+                    finishedPolygons = ({ x = currentPoly[currentPoly.Length - 1].x; y = currentPoly[currentPoly.Length - 1].y }::currentPoly) :: model.finishedPolygons
+                    // finishedPolygons = currentPoly :: model.finishedPolygons
                 }
 
 // wraps an update function with undo/redo.
