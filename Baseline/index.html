@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas API - Baseline</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+
+    button {
+        width: 100px;
+        font-size: large;
+    }
+
+    canvas {
+      border: 2px solid #333;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+      <button id="undo">Undo</button>
+      <button id="redo">Redo</button>
+  </div>
+  <canvas id="canvas" width="1200px" height="800px"></canvas>
+
+  <!-- Import external JavaScript -->
+  <script src="canvas.js"></script>
+</body>
+</html>

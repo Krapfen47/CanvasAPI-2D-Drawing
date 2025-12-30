@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/danielzangerl/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/danielzangerl/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.12.2</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/Users/danielzangerl/.nuget/packages/" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/Users/danielzangerl/.nuget/packages/fsharp.core/9.0.201</PkgFSharp_Core>
+    <PkgFeliz_UseElmish Condition=" '$(PkgFeliz_UseElmish)' == '' ">/Users/danielzangerl/.nuget/packages/feliz.useelmish/2.5.0</PkgFeliz_UseElmish>
+    <PkgFeliz Condition=" '$(PkgFeliz)' == '' ">/Users/danielzangerl/.nuget/packages/feliz/2.6.0</PkgFeliz>
+    <PkgFeliz_Router Condition=" '$(PkgFeliz_Router)' == '' ">/Users/danielzangerl/.nuget/packages/feliz.router/4.0.0</PkgFeliz_Router>
+    <PkgFable_Elmish_React Condition=" '$(PkgFable_Elmish_React)' == '' ">/Users/danielzangerl/.nuget/packages/fable.elmish.react/4.0.0</PkgFable_Elmish_React>
+    <PkgFable_Elmish_HMR Condition=" '$(PkgFable_Elmish_HMR)' == '' ">/Users/danielzangerl/.nuget/packages/fable.elmish.hmr/7.0.0</PkgFable_Elmish_HMR>
+  </PropertyGroup>
+</Project>

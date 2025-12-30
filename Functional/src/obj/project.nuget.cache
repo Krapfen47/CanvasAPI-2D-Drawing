@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "H1LH881yKSg=",
+  "success": true,
+  "projectFilePath": "/Users/danielzangerl/RiderProjects/Technikum/FPR/Project/src/App.fsproj",
+  "expectedPackageFiles": [
+    "/Users/danielzangerl/.nuget/packages/fable.ast/4.2.1/fable.ast.4.2.1.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.browser.blob/1.1.4/fable.browser.blob.1.1.4.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.browser.dom/2.4.4/fable.browser.dom.2.4.4.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.browser.event/1.4.4/fable.browser.event.1.4.4.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.browser.gamepad/1.0.3/fable.browser.gamepad.1.0.3.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.browser.webstorage/1.0.4/fable.browser.webstorage.1.0.4.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.core/3.7.1/fable.core.3.7.1.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.elmish/4.0.0/fable.elmish.4.0.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.elmish.hmr/7.0.0/fable.elmish.hmr.7.0.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.elmish.react/4.0.0/fable.elmish.react.4.0.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.react.types/18.3.0/fable.react.types.18.3.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fable.reactdom.types/18.2.0/fable.reactdom.types.18.2.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/feliz/2.6.0/feliz.2.6.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/feliz.compilerplugins/2.2.0/feliz.compilerplugins.2.2.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/feliz.router/4.0.0/feliz.router.4.0.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/feliz.useelmish/2.5.0/feliz.useelmish.2.5.0.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/fsharp.core/9.0.201/fsharp.core.9.0.201.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/danielzangerl/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}

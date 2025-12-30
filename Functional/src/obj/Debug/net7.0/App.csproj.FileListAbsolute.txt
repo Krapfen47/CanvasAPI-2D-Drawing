@@ -1,0 +1,4 @@
+/Users/danielzangerl/RiderProjects/Technikum/FPR/Project/src/bin/Debug/net7.0/App.deps.json
+/Users/danielzangerl/RiderProjects/Technikum/FPR/Project/src/obj/Debug/net7.0/App.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danielzangerl/RiderProjects/Technikum/FPR/Project/src/obj/Debug/net7.0/App.AssemblyInfoInputs.cache
+/Users/danielzangerl/RiderProjects/Technikum/FPR/Project/src/obj/Debug/net7.0/App.AssemblyInfo.cs
